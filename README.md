@@ -40,6 +40,8 @@ JSON: status, stdout, stderr, exit_code, tripped[], phases{}, policy{}
 ### Production-style (Docker)
 
 ```bash
+git clone https://github.com/arya251223/airlock.git
+cd airlock
 pip install -r requirements.txt
 make image                  # builds the hardened runner image
 make run                    # http://localhost:8000
@@ -50,6 +52,8 @@ Open <http://localhost:8000>, press **Run containment suite**.
 ### Without Docker (development only, Linux)
 
 ```bash
+git clone https://github.com/arya251223/airlock.git
+cd airlock
 pip install -r requirements.txt
 make run-dev
 ```
