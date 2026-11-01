@@ -1,0 +1,4 @@
+backend=process
+sequential x40: p50=68 ms  p95=69 ms  mean=55 ms
+concurrent x60 (4 slots): 26.9 runs/s, all success=True
+1 s timeout enforcement: wall time 1005-1008 ms (overshoot 5-8 ms)

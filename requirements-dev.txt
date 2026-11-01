@@ -1,0 +1,3 @@
+-r requirements.txt
+httpx>=0.27,<1.0          # FastAPI TestClient
+playwright>=1.44          # optional: browser UI checks (then: playwright install chromium)

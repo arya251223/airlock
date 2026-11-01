@@ -1,0 +1,23 @@
+PASS health indicator turns ready
+PASS limit chips rendered
+PASS gallery rendered with hostile group
+PASS editor preloaded with first example
+PASS normal run shows Completed
+PASS stdout shown
+PASS timeline has segments
+PASS clicking an example loads code
+PASS Ctrl+Enter runs; infinite loop killed at time limit
+PASS Time seal marked as hit
+PASS HTML in program output is not executed
+PASS HTML in output displayed literally
+PASS policy findings rendered for subprocess import
+PASS containment suite: all payloads behaved as expected
+PASS every example has a 'held' badge
+PASS history populated
+PASS every history row shows its status badge ON SCREEN
+PASS API-key bar hidden when auth is off
+PASS no external network requests (self-contained)
+PASS no console errors
+PASS mobile: no horizontal overflow
+
+21/21 UI checks passed

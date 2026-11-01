@@ -1,0 +1,63 @@
+# Test run: 2026-10-31T15:11Z  backend=process  python=3.12.3
+test_api_key_enforced (tests.test_api.ApiTests.test_api_key_enforced) ... skipped 'fastapi / httpx not installed'
+test_execute_success_matches_schema (tests.test_api.ApiTests.test_execute_success_matches_schema) ... skipped 'fastapi / httpx not installed'
+test_health_config_examples (tests.test_api.ApiTests.test_health_config_examples) ... skipped 'fastapi / httpx not installed'
+test_index_served (tests.test_api.ApiTests.test_index_served) ... skipped 'fastapi / httpx not installed'
+test_infinite_loop_times_out (tests.test_api.ApiTests.test_infinite_loop_times_out) ... skipped 'fastapi / httpx not installed'
+test_legacy_execute_alias (tests.test_api.ApiTests.test_legacy_execute_alias) ... skipped 'fastapi / httpx not installed'
+test_policy_block_mode_over_http (tests.test_api.ApiTests.test_policy_block_mode_over_http) ... skipped 'fastapi / httpx not installed'
+test_rate_limit_returns_429_with_retry_after (tests.test_api.ApiTests.test_rate_limit_returns_429_with_retry_after) ... skipped 'fastapi / httpx not installed'
+test_static_assets (tests.test_api.ApiTests.test_static_assets) ... skipped 'fastapi / httpx not installed'
+test_stats_reflect_runs (tests.test_api.ApiTests.test_stats_reflect_runs) ... skipped 'fastapi / httpx not installed'
+test_validation_errors (tests.test_api.ApiTests.test_validation_errors) ... skipped 'fastapi / httpx not installed'
+test_filesystem_and_dedupe (tests.test_classify.ClassifyTests.test_filesystem_and_dedupe) ... ok
+test_memory_error_text (tests.test_classify.ClassifyTests.test_memory_error_text) ... ok
+test_network (tests.test_classify.ClassifyTests.test_network) ... ok
+test_oom (tests.test_classify.ClassifyTests.test_oom) ... ok
+test_output_and_policy (tests.test_classify.ClassifyTests.test_output_and_policy) ... ok
+test_plain_success_trips_nothing (tests.test_classify.ClassifyTests.test_plain_success_trips_nothing) ... ok
+test_timeout (tests.test_classify.ClassifyTests.test_timeout) ... ok
+test_code_is_delivered_base64_and_bootstrap_runs_it (tests.test_docker_backend_mock.DockerBackendTests.test_code_is_delivered_base64_and_bootstrap_runs_it) ... ok
+test_container_removed_even_when_wait_fails_unexpectedly (tests.test_docker_backend_mock.DockerBackendTests.test_container_removed_even_when_wait_fails_unexpectedly) ... ok
+test_error_exit (tests.test_docker_backend_mock.DockerBackendTests.test_error_exit) ... ok
+test_hardening_flags (tests.test_docker_backend_mock.DockerBackendTests.test_hardening_flags) ... ok
+test_healthcheck_reports_missing_daemon (tests.test_docker_backend_mock.DockerBackendTests.test_healthcheck_reports_missing_daemon) ... ok
+test_oom_detected (tests.test_docker_backend_mock.DockerBackendTests.test_oom_detected) ... ok
+test_output_truncated (tests.test_docker_backend_mock.DockerBackendTests.test_output_truncated) ... ok
+test_runtime_option_passthrough (tests.test_docker_backend_mock.DockerBackendTests.test_runtime_option_passthrough) ... ok
+test_success (tests.test_docker_backend_mock.DockerBackendTests.test_success) ... ok
+test_timeout_kills_and_removes (tests.test_docker_backend_mock.DockerBackendTests.test_timeout_kills_and_removes) ... ok
+test_block_mode_stops_shell_escape_before_execution (tests.test_examples.GalleryTests.test_block_mode_stops_shell_escape_before_execution) ... ok
+test_concurrent_executions_are_isolated (tests.test_examples.GalleryTests.test_concurrent_executions_are_isolated) ... ok
+test_every_example_behaves_as_declared (tests.test_examples.GalleryTests.test_every_example_behaves_as_declared) ... ok
+test_fork_bomb_does_not_poison_the_next_run (tests.test_examples.GalleryTests.test_fork_bomb_does_not_poison_the_next_run) ... ok
+test_host_secret_is_not_visible_inside (tests.test_examples.GalleryTests.test_host_secret_is_not_visible_inside) ... ok
+test_runs_do_not_share_state (tests.test_examples.GalleryTests.test_runs_do_not_share_state) ... ok
+test_syntax_error_is_a_normal_error (tests.test_examples.GalleryTests.test_syntax_error_is_a_normal_error) ... ok
+test_timeout_is_honoured_within_tolerance (tests.test_examples.GalleryTests.test_timeout_is_honoured_within_tolerance) ... ok
+test_unicode_and_stderr_roundtrip (tests.test_examples.GalleryTests.test_unicode_and_stderr_roundtrip) ... ok
+test_clean_code (tests.test_policy.PolicyTests.test_clean_code) ... ok
+test_dunder_import_flagged (tests.test_policy.PolicyTests.test_dunder_import_flagged) ... ok
+test_from_os_import_system (tests.test_policy.PolicyTests.test_from_os_import_system) ... ok
+test_known_limitation_obfuscation_is_not_caught (tests.test_policy.PolicyTests.test_known_limitation_obfuscation_is_not_caught) ... ok
+test_medium_severity_not_blocked (tests.test_policy.PolicyTests.test_medium_severity_not_blocked) ... ok
+test_off_mode_skips_analysis (tests.test_policy.PolicyTests.test_off_mode_skips_analysis) ... ok
+test_os_system_call (tests.test_policy.PolicyTests.test_os_system_call) ... ok
+test_socket_import_flagged_in_warn_mode (tests.test_policy.PolicyTests.test_socket_import_flagged_in_warn_mode) ... ok
+test_subprocess_blocked_in_block_mode (tests.test_policy.PolicyTests.test_subprocess_blocked_in_block_mode) ... ok
+test_syntax_error_reported_not_raised (tests.test_policy.PolicyTests.test_syntax_error_reported_not_raised) ... ok
+test_backend_exception_becomes_internal_error (tests.test_service.ServiceTests.test_backend_exception_becomes_internal_error) ... ok
+test_busy_when_all_slots_taken (tests.test_service.ServiceTests.test_busy_when_all_slots_taken) ... ok
+test_default_timeout_used (tests.test_service.ServiceTests.test_default_timeout_used) ... ok
+test_policy_block_never_reaches_backend (tests.test_service.ServiceTests.test_policy_block_never_reaches_backend) ... ok
+test_rate_limit_per_client (tests.test_service.ServiceTests.test_rate_limit_per_client) ... ok
+test_slot_released_after_backend_failure (tests.test_service.ServiceTests.test_slot_released_after_backend_failure) ... ok
+test_stats_counts (tests.test_service.ServiceTests.test_stats_counts) ... ok
+test_success_path_shape (tests.test_service.ServiceTests.test_success_path_shape) ... ok
+test_timeout_clamped_to_max (tests.test_service.ServiceTests.test_timeout_clamped_to_max) ... ok
+test_refill_over_time (tests.test_service.TokenBucketTests.test_refill_over_time) ... ok
+
+----------------------------------------------------------------------
+Ran 57 tests in 9.990s
+
+OK (skipped=11)

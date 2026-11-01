@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Airlock: run untrusted code safely</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b6e79'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23f8fafa' stroke-width='3'/%3E%3Crect x='14.5' y='4' width='3' height='9' fill='%23f8fafa'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<a class="skip-link" href="#editor">Skip to editor</a>
+
+<header class="top">
+  <div class="brand">
+    <h1>Airlock</h1>
+    <p>Run untrusted code. Nothing gets out.</p>
+  </div>
+  <div class="env" aria-label="Sandbox environment">
+    <div id="limits" class="chips" aria-live="polite"></div>
+    <div id="health" class="health" role="status"><span class="dot"></span><span id="healthText">Connecting…</span></div>
+  </div>
+</header>
+
+<div id="authBar" class="auth" hidden>
+  <label for="apiKey">This server requires an API key</label>
+  <input id="apiKey" type="password" autocomplete="off" placeholder="X-API-Key">
+</div>
+
+<main class="grid">
+  <section class="col-left" aria-label="Code and examples">
+    <div class="panel editor-panel">
+      <div class="panel-head">
+        <h2>Code</h2>
+        <div class="controls">
+          <label class="timeout" for="timeout">Time limit
+            <input id="timeout" type="range" min="1" max="15" value="5">
+            <output id="timeoutOut" for="timeout">5 s</output>
+          </label>
+          <button id="runBtn" class="primary" type="button">Run in sandbox <kbd>Ctrl</kbd><kbd>Enter</kbd></button>
+        </div>
+      </div>
+      <div class="editor" id="editorWrap">
+        <pre id="gutter" aria-hidden="true">1</pre>
+        <textarea id="editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Python source code"></textarea>
+      </div>
+      <div class="editor-foot"><span id="charCount">0 chars</span><span>Python 3.11. Standard library only, no internet.</span></div>
+    </div>
+
+    <div class="panel gallery-panel">
+      <div class="panel-head">
+        <div>
+          <h2>Payloads</h2>
+          <p class="sub">Load any snippet, or fire the whole hostile set and see what holds.</p>
+        </div>
+        <button id="suiteBtn" class="secondary" type="button">Run containment suite</button>
+      </div>
+      <div id="suiteSummary" class="suite-summary" role="status" hidden></div>
+      <div id="gallery" class="gallery"></div>
+    </div>
+  </section>
+
+  <section class="col-right" aria-label="Results">
+    <div class="panel result-panel">
+      <div class="panel-head"><h2>Containment report</h2></div>
+      <div id="result" aria-live="polite">
+        <div class="empty">
+          <p class="empty-title">Nothing run yet</p>
+          <p>Press <strong>Run in sandbox</strong>. Each run gets its own disposable container; the report shows the output and which limits had to step in.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel history-panel">
+      <div class="panel-head">
+        <h2>Recent runs</h2>
+        <button id="clearHistory" class="link" type="button">Clear</button>
+      </div>
+      <ul id="history" class="history"><li class="muted">Runs from this browser appear here.</li></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>API docs at <a href="/docs">/docs</a></span>
+  <span>Live stats at <a href="/api/stats">/api/stats</a></span>
+</footer>
+
+<script src="/static/app.js" defer></script>
+</body>
+</html>
